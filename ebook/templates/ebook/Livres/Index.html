@@ -1,0 +1,105 @@
+{% extends "../Shared/_Layout.html" %}
+
+
+
+<!--
+
+                    {% include '../Livres/index.html' %}
+<h2 style="text-align:center;">Liste des livres</h2>
+<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <div class="input-group">
+
+            <input class="form-control" type="text" name="SearchName" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+            <div class="input-group-append">
+                <button class="btn btn-primary" name="SearchName" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+
+
+    </div>
+</form>
+<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <div class="input-group">
+
+            <input class="form-control" type="date" name="Searchdate" placeholder="Rechercher en date..." aria-label="Search" aria-describedby="basic-addon2" />
+            <div class="input-group-append">
+                <button class="btn btn-primary" name="Searchdate" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+
+
+    </div>
+</form>
+<br />
+<br />
+<p>
+    <button>Ajouter nouveau Livre"</button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Titre
+        </th>
+        <th>
+            Auteur
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Date De Publication
+        </th>
+        <th>
+            Date Edition
+        </th>
+        <th>
+            Image
+        </th>
+        <th>
+            PDF
+        </th>
+        <th>
+            nom Categorie
+        </th>
+        <th></th>
+    </tr>
+
+    {% for c in livres %}
+    {%for Categorie in ebook.categorie_set.all %}
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                {{c.auteur}}
+            </td>
+            <td>
+                {{c.description}}
+            </td>
+            <td>
+                {{c.Date_Publication}}
+            </td>
+            <td>
+                {{c.Date_Edition}}
+            </td>
+            <td>
+                <img src="Url.Content({{c.Image}})" width="80" height="80" />
+            </td>
+            <td>
+                <p>{{c.PDF}}</p>
+
+
+            </td>
+            <td>
+
+                {{Categorie.name_categorie}}
+            </td>
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.ID_Livre }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID_Livre }) |
+                @Html.ActionLink("Annuler", "Delete", new { id = item.ID_Livre })
+
+            </td>
+        </tr>
+    {% endfor %}
+    {%endfor%}
+
+</table> -->
